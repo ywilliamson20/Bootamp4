@@ -29,8 +29,8 @@ class AddBuilding extends React.Component {
 			longitude: '',
 
 	}
-	cancelCourse = () => {
-	  document.getElementById("create-course-form").reset();
+	clearForm = () => {
+	  document.getElementById("createform").reset();
 	}
 	check=()=>{
 		//console.log(document.getElementById('name').value); // Shows the right value!
@@ -66,7 +66,7 @@ class AddBuilding extends React.Component {
 
 			return (
 
-        <form id = "create-course-form" >
+        <form id = "createform" >
 					<label htmlFor= "name">Building Name</label>
 					<input type = "text" name = "name" id="name" />
 					<label htmlFor= "baddress">Building Address</label>
@@ -78,7 +78,7 @@ class AddBuilding extends React.Component {
 					<label htmlFor= "blatitude">Latitude</label>
 					<input type = "text" name = "latitude" id = "latitude" />
 
-					<Button variant="primary" button type='button' onClick={()=>{this.check(); this.cancelCourse();}}> <img src={require('./plus.svg')}></img>Add a Building</Button>
+					<Button variant="primary" button type='button' onClick={()=>{this.check(); this.clearForm();}}> <img src={require('./plus.svg')}></img>Add a Building</Button>
 
 
 				</form>
